@@ -89,8 +89,28 @@ var upperCasedCharacters = [
 ];
 
 // Function to prompt user for password options
+// collection user prefrences
 function getPasswordOptions() {
+  var amountOfLetters = prompt ("How many characters in your password")
+  console.log('amountOfLetters', amountOfLetters);
 
+  if (isNaN(amountOfLetters)) {
+    alert ("Hey this is not a number");
+    getPasswordOptions();
+  }
+
+  if (amountOfLetters < 8 || amountOfLetters > 128) {
+    alert ("Hey your password needs to be between 8 and 128 characters")
+    getPasswordOptions()
+
+  } 
+var useUpper = confirm ("Do you want to use upper case Letters?")
+var useLowerCase = confirm ("Do you want to use lower case Letters?")
+var specialCharacters = confirm ("Do you want to use special characters?")
+
+// if statement to make sure user says true to at least one character type
+// store all of the variables in an object
+// return that object
 }
 
 // Function for getting a random element from an array
@@ -100,6 +120,14 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
+  var userData = getPasswordOptions();
+
+
+
+
+
+
+  // end result of this function will be your password
 
 }
 
